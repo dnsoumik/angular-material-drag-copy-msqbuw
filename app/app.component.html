@@ -1,0 +1,38 @@
+<mat-list>
+  <mat-list-item
+        cdkDrag
+        cdkDropList
+        cdkDropListConnectedTo="drop-list"
+        *ngFor="let type of types"
+        [cdkDragData]="type"
+        (cdkDragStarted)="dragStart($event)"
+        (cdkDragMoved)="moved($event)"
+        >
+        {{ type }}
+        <div *cdkDragPlaceholder class="field-placeholder"></div>
+      </mat-list-item>
+    </mat-list>
+
+  <fieldset
+  cdkDropList
+  id="drop-list"
+  (cdkDropListDropped)="itemDropped($event)"
+>
+  <legend>Fields</legend>
+
+  <mat-expansion-panel
+   *ngFor="let field of fields; let fieldIndex = index; trackBy: trackByIndex"
+    cdkDrag
+  >
+    <div *cdkDragPlaceholder class="field-placeholder"></div>
+
+    <mat-expansion-panel-header cdkDragHandle>
+      <mat-panel-title>{{ field }}</mat-panel-title>
+      <mat-panel-description>
+        {{ field }}
+  
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    Dummy info here
+  </mat-expansion-panel>
+</fieldset>

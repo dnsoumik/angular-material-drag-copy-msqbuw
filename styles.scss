@@ -1,0 +1,25 @@
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+body { 
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.basic-container {
+  padding: 5px;
+}
+
+.version-info {
+  color: black;
+  font-size: 8pt;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+/**
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
